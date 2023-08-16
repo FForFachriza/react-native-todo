@@ -49,7 +49,7 @@ export default function App() {
               <View className={`flex flex-row items-center p-5 my-2 bg-white shadow-2xl rounded-2xl`}>
                 <View className="bg-blue-400 h-8 w-8 rounded-lg"></View>
                 <View className="flex flex-row justify-between items-center pr-8 w-full">
-                  <Text className="ml-4">{val}</Text>
+                  <Text className="ml-4 max-w-[250px]">{val}</Text>
                   <TouchableOpacity onPress={() => removeTodoHandler(i)}>
                     <View className="flex bg-red-400 rounded-full h-8 w-8 items-center justify-center">
                       <Text className="text-2xl text-white">-</Text>
@@ -71,7 +71,7 @@ function AddTask() {
   const [text, setText] = useState<string>("");
   const [isAlert, setIsAlert] = useState<boolean>(false);
 
-  console.log(text);
+  // console.log(text);
 
   const handleClick = () => {
     if (text.length === 0) {
@@ -82,7 +82,7 @@ function AddTask() {
     }
   };
 
-  console.log(todo);
+  // console.log(todo);
 
   return (
     <View className="flex flex-row items-center w-full absolute bottom-8 right-4 px-4 my-8 justify-between">
